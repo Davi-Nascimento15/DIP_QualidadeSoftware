@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Dependency_Inversion_Principles.Classes
 {
-    internal class Email:IEmail
+    internal class Email
     {
-        private ICliente cliente;
+        private Cliente cliente;
         private string assunto;
         private string mensagem;
-        public Email(ICliente cliente, string assunto, string mensagem)
+        public Email(Cliente cliente, string assunto, string mensagem)
         {
             this.cliente = cliente;
             this.assunto = assunto;

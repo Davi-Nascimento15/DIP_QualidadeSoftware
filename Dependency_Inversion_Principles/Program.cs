@@ -11,14 +11,14 @@ namespace Dependency_Inversion_Principles
     {
         static void Main(string[] args)
         {
-            ICliente cliente = new Cliente("Davi Nascimento", "(35) 99881-1355", "Rua B,10 - Alfenas-MG");
+            Cliente cliente = new Cliente("Davi Nascimento", "(35) 99881-1355", "Rua B,10 - Alfenas-MG");
 
-            IEmail email = new Email(cliente, "Cobrança", "Ainda não recebemos o pagamento do título X");
+            Email email = new Email(cliente, "Cobrança", "Ainda não recebemos o pagamento do título X");
             email.EnviarEmail();
             
             Console.WriteLine("\n");
             
-            IMensagem sms = new SMS(cliente, "Ainda não recebemos o pagamento do título X");
+            SMS sms = new SMS(cliente, "Ainda não recebemos o pagamento do título X");
             sms.EnviarMensagem();
             
             Console.ReadLine();

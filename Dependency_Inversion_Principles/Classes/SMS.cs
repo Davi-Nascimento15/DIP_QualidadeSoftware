@@ -7,11 +7,11 @@ using Dependency_Inversion_Principles;
 
 namespace Dependency_Inversion_Principles.Classes
 {
-    internal class SMS: IMensagem
+    internal class SMS
     {
-        private ICliente cliente;
+        private Cliente cliente;
         private string mensagem;
-        public SMS(ICliente cliente, string mensagem)
+        public SMS(Cliente cliente, string mensagem)
         {
             this.cliente = cliente;
             this.mensagem = mensagem;   

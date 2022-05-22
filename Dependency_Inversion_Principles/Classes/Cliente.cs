@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Dependency_Inversion_Principles.Classes
 {
-    internal class Cliente : ICliente
+    internal class Cliente
     {
         string nome;
         string telefone;
