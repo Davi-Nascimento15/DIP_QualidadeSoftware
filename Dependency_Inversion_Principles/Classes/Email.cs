@@ -11,15 +11,22 @@ namespace Dependency_Inversion_Principles.Classes
         private ICliente cliente;
         private string assunto;
         private string mensagem;
+
+        public Email() { }
         public Email(ICliente cliente, string assunto, string mensagem)
         {
-            this.cliente = cliente;
-            this.assunto = assunto;
-            this.mensagem = mensagem;
+            this.Cliente = cliente;
+            this.Assunto = assunto;
+            this.Mensagem = mensagem;
         }
+
+        public string Assunto { get => assunto; set => assunto = value; }
+        public string Mensagem { get => mensagem; set => mensagem = value; }
+        public ICliente Cliente { get => cliente; set => cliente = value; }
+
         public void EnviarEmail()
         {
-            Console.WriteLine("Email enviado para: " + cliente.getNome + "\nAssunto: " + assunto + "\nMensagem: " + mensagem);
+            Console.WriteLine("Email enviado para: " + Cliente.getNome + "\nAssunto: " + Assunto + "\nMensagem: " + Mensagem);
         }
     }
 }

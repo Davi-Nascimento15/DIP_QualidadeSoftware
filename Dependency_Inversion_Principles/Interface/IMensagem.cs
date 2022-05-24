@@ -3,6 +3,8 @@
     internal interface IMensagem
     {
         void EnviarMensagem();
+        string Mensagem { get; set; }
+        ICliente Cliente { get; set; }
 
     }
 }

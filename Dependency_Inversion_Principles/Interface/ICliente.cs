@@ -2,10 +2,10 @@
 {
     internal interface ICliente
     {
-        string getEndereco { get; }
+        string getEmail { get; }
         string getNome { get; }
         string getTelefone { get; }
-        string setEndereco { set; }
+        string setEmail { set; }
         string setNome { set; }
         string setTelefone { set; }
     }

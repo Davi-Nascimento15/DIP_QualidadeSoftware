@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\Email.cs" />
+    <Compile Include="Factory.cs" />
     <Compile Include="Interface\IEmail.cs" />
     <Compile Include="Interface\IMensagem.cs" />
     <Compile Include="Interface\ICliente.cs" />

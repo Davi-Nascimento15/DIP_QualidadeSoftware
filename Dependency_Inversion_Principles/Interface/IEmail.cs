@@ -3,6 +3,8 @@
     internal interface IEmail
     {
         void EnviarEmail();
-
+        string Assunto { get; set; }
+        string Mensagem { get; set; }
+       ICliente Cliente { get; set; }
     }
 }

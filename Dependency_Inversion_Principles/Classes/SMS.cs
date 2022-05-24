@@ -11,15 +11,20 @@ namespace Dependency_Inversion_Principles.Classes
     {
         private ICliente cliente;
         private string mensagem;
+
+        public SMS() { }
         public SMS(ICliente cliente, string mensagem)
         {
-            this.cliente = cliente;
-            this.mensagem = mensagem;   
+            this.Cliente = cliente;
+            this.Mensagem = mensagem;   
         }
+
+        public string Mensagem { get => mensagem; set => mensagem = value; }
+        public ICliente Cliente { get => cliente; set => cliente = value; }
 
         public void EnviarMensagem()
         {
-            Console.WriteLine("Mensagem enviada para o telefone: " + cliente.getTelefone + "\nMensagem: " + mensagem);
+            Console.WriteLine("Mensagem enviada para o telefone: " + Cliente.getTelefone + "\nMensagem: " + Mensagem);
         }
     }
 }

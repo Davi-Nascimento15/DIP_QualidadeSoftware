@@ -10,22 +10,22 @@ namespace Dependency_Inversion_Principles.Classes
     {
         string nome;
         string telefone;
-        string endereco;
+        string email;
 
         public Cliente() { }
-        public Cliente(string nome, string telefone, string endereco)
+        public Cliente(string nome, string telefone, string email)
         {
             this.nome = nome;
             this.telefone = telefone;
-            this.endereco = endereco;
+            this.email = email;
         }
 
         public string getNome { get => nome; }
         public string setNome { set => nome = value; }
         public string getTelefone { get => telefone; }
         public string setTelefone { set => telefone = value; }
-        public string getEndereco { get => endereco; }
-        public string setEndereco { set => endereco = value; }
+        public string getEmail { get => email; }
+        public string setEmail { set => email = value; }
 
     }
 }

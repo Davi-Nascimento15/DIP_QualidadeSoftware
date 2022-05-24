@@ -10,15 +10,24 @@ namespace Dependency_Inversion_Principles
     internal class Program
     {
         static void Main(string[] args)
-        {
-            ICliente cliente = new Cliente("Davi Nascimento", "(35) 99881-1355", "Rua B,10 - Alfenas-MG");
 
-            IEmail email = new Email(cliente, "Cobrança", "Ainda não recebemos o pagamento do título X");
+        {
+            ICliente cliente = Factory.NovoCliente();
+            cliente.setNome = "Davi Nascimento";
+            cliente.setTelefone = "(35) 99881-1355";
+            cliente.setEmail = "davi@gmail.com";
+
+            IEmail email = Factory.NovoEmail();
+            email.Cliente = cliente;
+            email.Assunto = "Cobrança";
+            email.Mensagem ="Ainda não recebemos o pagamento do título X";
             email.EnviarEmail();
             
             Console.WriteLine("\n");
-            
-            IMensagem sms = new SMS(cliente, "Ainda não recebemos o pagamento do título X");
+
+            IMensagem sms = Factory.NovoSMS();
+            sms.Mensagem = "Ainda não recebemos o pagamento do título X";
+            sms.Cliente= cliente;
             sms.EnviarMensagem();
             
             Console.ReadLine();
